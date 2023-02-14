@@ -26,6 +26,6 @@ public class GuessTheNumber {
             }
         } while (guess != randomNumber);
 
-        input.close();
+        //input.close();
     }
 }

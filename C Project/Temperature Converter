@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    float temp, converted_temp;
+    char unit;
+
+    printf("Enter the temperature and the unit (C/F): ");
+    scanf("%f %c", &temp, &unit);
+
+    if (unit == 'C' || unit == 'c') {
+        // Convert Celsius to Fahrenheit
+        converted_temp = (temp * 9/5) + 32;
+        printf("%.2f C = %.2f F\n", temp, converted_temp);
+    } else if (unit == 'F' || unit == 'f') {
+        // Convert Fahrenheit to Celsius
+        converted_temp = (temp - 32) * 5/9;
+        printf("%.2f F = %.2f C\n", temp, converted_temp);
+    } else {
+        printf("Invalid unit. Please enter 'C' or 'F'.\n");
+    }
+
+    return 0;
+}
